@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Üçyıldız Kitabevi Sipariş uygulamasının gizlilik politikası: hangi veriler işlenir, nerede ve ne kadar süre saklanır, kimlerle paylaşılır.">
+<title>Üçyıldız Kitabevi Sipariş — Gizlilik Politikası</title>
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --fg: #1f2328;
+    --muted: #5b6370;
+    --accent: #8a5300;
+    --line: #e3dfd5;
+    --card: #ffffff;
+    --code: #f1ede4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15171b;
+      --fg: #e6e4df;
+      --muted: #a2a7b0;
+      --accent: #e3b45e;
+      --line: #2f333a;
+      --card: #1c1f24;
+      --code: #262a31;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  main { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1rem 4rem; }
+  h1 { font-size: 1.7rem; line-height: 1.25; margin: 0 0 .6rem; }
+  h2 {
+    font-size: 1.25rem; line-height: 1.3;
+    margin: 2.6rem 0 .8rem; padding-top: 1.2rem;
+    border-top: 1px solid var(--line);
+  }
+  h3 { font-size: 1.05rem; margin: 1.6rem 0 .4rem; }
+  p, ul, ol { margin: .6rem 0; }
+  ul, ol { padding-left: 1.4rem; }
+  li { margin: .35rem 0; }
+  a { color: var(--accent); text-underline-offset: .15em; }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: .88em; background: var(--code);
+    padding: .1em .35em; border-radius: 4px; overflow-wrap: anywhere;
+  }
+  .meta { color: var(--muted); font-size: .95rem; margin: 0; }
+  .meta span { white-space: nowrap; }
+  .ozet {
+    margin: 1.6rem 0; padding: 1rem 1.2rem;
+    background: var(--card); border: 1px solid var(--line);
+    border-left: 4px solid var(--accent); border-radius: 8px;
+  }
+  .ozet p:first-child { margin-top: 0; font-weight: 600; }
+  .ozet ul { margin-bottom: 0; }
+  nav { margin: 1.6rem 0; font-size: .95rem; }
+  nav ol { columns: 2 14rem; column-gap: 2rem; margin: .4rem 0 0; }
+  nav li { margin: .2rem 0; break-inside: avoid; }
+  .not { color: var(--muted); font-size: .95rem; }
+  ol.harfli { list-style: none; padding-left: 0; }
+  ol.harfli li { padding-left: 2rem; text-indent: -2rem; }
+  ol.harfli b { display: inline-block; width: 2rem; text-indent: 0; }
+  #english { margin-top: 3.5rem; }
+  footer {
+    margin-top: 3rem; padding-top: 1rem;
+    border-top: 1px solid var(--line);
+    color: var(--muted); font-size: .9rem;
+  }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <h1>Üçyıldız Kitabevi Sipariş — Gizlilik Politikası</h1>
+  <p class="meta">
+    <span>Yürürlük tarihi: 7 Ekim 2026</span> ·
+    <span>Uygulama kimliği: <code>com.ucyildizkitabevi.siparis</code></span> ·
+    <span>Platformlar: iOS, Android, Windows</span>
+  </p>
+</header>
+
+<section class="ozet" aria-label="Kısa özet">
+  <p>Bu uygulama yalnızca Üçyıldız Kitabevi çalışanlarının okullardan kitap siparişi kaydetmesi için yapılmıştır.</p>
+  <ul>
+    <li>Reklam, analitik ya da takip aracı yoktur. Veriler satılmaz.</li>
+    <li>Veriler Supabase altyapısında, Frankfurt (Almanya, AB) bölgesinde saklanır. Her gece alınan yedekler 90 gün tutulur.</li>
+    <li>Kamera yalnızca kitap barkodu okumak için kullanılır. Görüntü kaydedilmez.</li>
+    <li>Sorular ve talepler için: <a href="mailto:bilgi@ucyildizkitabevi.com">bilgi@ucyildizkitabevi.com</a></li>
+  </ul>
+</section>
+
+<nav aria-label="İçindekiler">
+  <strong>İçindekiler</strong>
+  <ol>
+    <li><a href="#kapsam">Kapsam</a></li>
+    <li><a href="#veriler">Toplanan veriler</a></li>
+    <li><a href="#amac">Kullanım amacı</a></li>
+    <li><a href="#saklama">Saklama yeri ve süresi</a></li>
+    <li><a href="#paylasim">Paylaşım</a></li>
+    <li><a href="#guvenlik">Güvenlik</a></li>
+    <li><a href="#haklar">Haklarınız ve iletişim</a></li>
+    <li><a href="#degisiklikler">Değişiklikler</a></li>
+    <li><a href="#cocuklar">Çocuklar</a></li>
+    <li><a href="#english">Summary in English</a></li>
+  </ol>
+</nav>
+
+<h2 id="kapsam">1. Kapsam</h2>
+<p>Bu politika, Isparta'daki Üçyıldız Kitabevi'nin kendi çalışanları için kullandığı “Üçyıldız Kitabevi Sipariş” uygulamasının (iOS, Android ve Windows) hangi verileri işlediğini anlatır.</p>
+<ul>
+  <li><strong>Uygulama halka açık değildir.</strong> App Store'da listelenmemiş (unlisted) olarak dağıtılır, mağaza aramasında çıkmaz.</li>
+  <li>Uygulamada kayıt olma ekranı yoktur. Hesaplar dükkan içinden, aktif bir çalışan hesabıyla açılır. Hesabı olmayan biri uygulamada güncel sürüm bilgisinden başka bir şey göremez.</li>
+  <li>Kullanıcılar dükkanın çalışanlarıdır (ör. okullardan sipariş toplayan saha personeli). Öğretmenler, öğrenciler ve veliler uygulamayı kullanmaz.</li>
+  <li>6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) bakımından veri sorumlusu Üçyıldız Kitabevi'dir.</li>
+</ul>
+
+<h2 id="veriler">2. Toplanan veriler</h2>
+<p>Kişisel verileri uygulamaya çalışanlar elle girer. Uygulama rehber, konum gibi başka kaynaklardan veri almaz.</p>
+
+<h3>2.1 Çalışanlara (kullanıcılara) ait veriler</h3>
+<ul>
+  <li><strong>Ad soyad.</strong> Hesap bu adla açılır ve çalışanın kaydettiği işlemlerin yanında görünür.</li>
+  <li><strong>Giriş şifresi.</strong> Şifre Supabase'in kimlik doğrulama hizmetinde özetlenmiş (hash) olarak tutulur. Uygulama şifreyi cihazda saklamaz.</li>
+  <li><strong>E-posta adresi istenmez.</strong> Giriş için ad soyaddan otomatik bir iç ad türetilir (ör. <code>ahmet.yilmaz@kullanici.ucyildiz</code>). Bu gerçek bir e-posta kutusu değildir. Bu adrese e-posta gönderilmez ve çalışan bu adı görmez.</li>
+  <li><strong>Hesap bilgileri:</strong> hesabın aktif mi pasif mi olduğu, hesabı kimin ve ne zaman açtığı.</li>
+  <li><strong>İşlem kayıtları:</strong> hangi çalışanın hangi siparişi ne zaman eklediği, düzenlediği, durumunu değiştirdiği, sildiği ya da geri aldığı. Ayrıca okul, öğretmen ve kitap kayıtlarını kimin eklediği, bir kitap kaydını kimin ne zaman güncellediği.</li>
+</ul>
+
+<h3>2.2 Üçüncü kişilere ait veriler (öğretmenler)</h3>
+<p>Sipariş veren öğretmenler (uygulamada “hoca”) uygulamayı kullanmaz. Bilgilerini sipariş alınırken çalışan girer.</p>
+<ul>
+  <li>Öğretmenin <strong>adı soyadı</strong>.</li>
+  <li><strong>Telefon numarası</strong> (isteğe bağlı, boş bırakılabilir).</li>
+  <li>Öğretmenin bağlı olduğu <strong>okul</strong>: okul adı, ilçe, okul türü (ilkokul, ortaokul, lise, dershane, diğer) ve özel okul olup olmadığı.</li>
+  <li>Öğretmen adına verilen <strong>siparişler</strong> (bkz. 2.3).</li>
+</ul>
+<p>Uygulamada öğrencilere ait bir alan yoktur.</p>
+
+<h3>2.3 Sipariş ve kitap verileri</h3>
+<ul>
+  <li><strong>Sipariş:</strong> okul, öğretmen, kitaplar ve adetleri, teslim şekli (dükkandan toplu, dükkandan öğrenciler alacak ya da okula teslim), durum (bekliyor, yayınevine sipariş verildi, geldi, teslim edildi), tarih ve isteğe bağlı bir not. Not alanı serbest metindir. Buraya yalnızca siparişle ilgili bilgi yazılması beklenir.</li>
+  <li><strong>Kitap ve fiyat listeleri:</strong> yayınevi, kitap adı, barkod ve fiyat. Bunlar kişisel veri değildir.</li>
+  <li><strong>Fiyat listesi aktarma:</strong> Bir yayınevinin Excel fiyat listesi aktarıldığında, seçilen dosya okunmak üzere sunucu fonksiyonuna gönderilir. Dosyanın kendisi saklanmaz. Yalnızca çalışanın onayladığı kitap satırları (ad, barkod, fiyat) kaydedilir.</li>
+</ul>
+
+<h3>2.4 Cihaz izinleri ve cihazda saklananlar</h3>
+<ul>
+  <li><strong>Kamera</strong> (yalnızca iPhone, iPad ve Android). Yalnızca barkod okuma ekranı açıldığında, kitap barkodunu okumak için kullanılır. Görüntü cihazın içinde işlenir. Fotoğraf ya da video kaydedilmez, görüntü hiçbir yere gönderilmez. Uygulama yalnızca okunan barkod numarasını kullanır.
+    <ul>
+      <li>iOS'ta barkod tanıma Apple'ın kendi çerçevesiyle yapılır.</li>
+      <li>Android'de tanıma, uygulamanın içine gömülü Google ML Kit kütüphanesiyle yine cihaz üzerinde yapılır. Google'ın belgelerine göre bu kütüphane, kendi çalışmasıyla ilgili teknik ölçümleri (ör. cihaz modeli, uygulama sürümü, hata kodları) Google'a gönderebilir.</li>
+      <li>Windows'ta kamera kullanılmaz. Barkod, USB barkod okuyucuyla ya da elle girilir.</li>
+    </ul>
+  </li>
+  <li><strong>Dosya seçimi.</strong> Fiyat listesi aktarılırken yalnızca kullanıcının seçtiği dosyaya (xls, xlsx, ods, csv) erişilir. Fotoğraf arşivine erişilmez.</li>
+  <li><strong>Telefon.</strong> Öğretmenin numarasına dokunulduğunda cihazın kendi arama uygulaması açılır, arama uygulamanın dışında yapılır. Numara panoya kopyalanabilir. Uygulama arama geçmişine ya da rehbere erişmez.</li>
+  <li><strong>Cihazda saklanan tek bilgi oturum bilgisidir:</strong> giriş yapıldıktan sonra her açılışta yeniden şifre girilmemesi için verilen oturum anahtarı. Çıkış yapıldığında silinir. Sipariş, okul, öğretmen ve kitap bilgileri cihazda kalıcı olarak tutulmaz. Bunlar ekranda göstermek için sunucudan alınır.</li>
+  <li><strong>Güncelleme kontrolü.</strong> Uygulama açılışta sunucudan son sürüm bilgisini sorar. Bu sorguda yalnızca platform (iOS, Android, Windows) ve uygulamanın derleme numarası kullanılır.</li>
+  <li><strong>Uygulamanın erişmedikleri:</strong> konum, rehber (kişiler), fotoğraflar, mikrofon, takvim ve reklam kimliği. Uygulama bildirim göndermez.</li>
+  <li><strong>Sunucu kayıtları.</strong> Altyapı sağlayıcısı Supabase, hizmeti işletmek ve güvenliğini sağlamak için bağlantı kayıtları (ör. IP adresi, istek zamanı) tutabilir. Dükkan bu kayıtları kişileri tanımak ya da izlemek için kullanmaz.</li>
+</ul>
+
+<h2 id="amac">3. Kullanım amacı</h2>
+<p>Veriler yalnızca dükkanın sipariş işini yürütmek için kullanılır:</p>
+<ul>
+  <li>Okullardan ve öğretmenlerden alınan kitap siparişlerini kaydetmek, durumlarını izlemek ve teslim etmek.</li>
+  <li>Sipariş ve teslimatla ilgili olarak öğretmenle telefonla iletişim kurmak.</li>
+  <li>Barkodla kitap ve fiyat sorgulamak. Yayınevlerine verilecek siparişler için kitap, okul ve öğretmen bazında listeler çıkarmak.</li>
+  <li>Çalışan hesaplarını yönetmek. Bir kaydı kimin ne zaman eklediğini ya da değiştirdiğini görerek hataları düzeltebilmek.</li>
+</ul>
+<p>Veriler reklam, pazarlama ya da profil çıkarma amacıyla kullanılmaz. Uygulamada kişiler hakkında otomatik karar veren bir işlem yoktur.</p>
+
+<h2 id="saklama">4. Saklama yeri ve süresi</h2>
+<h3>Nerede</h3>
+<ul>
+  <li>Veritabanı, giriş hizmeti ve sunucu fonksiyonları Supabase altyapısında, <strong>Frankfurt (Almanya, Avrupa Birliği)</strong> bölgesinde çalışır. Yani veriler Türkiye dışında saklanır.</li>
+  <li>Her gece (Türkiye saatiyle yaklaşık 03:00) veritabanının tam yedeği otomatik olarak alınır. Yedekler özel (herkese kapalı) bir GitHub deposunda, GitHub Actions üzerinde saklanır. <strong>90 gün sonra otomatik olarak silinir.</strong> Yedeklerin hangi ülkedeki sunucularda tutulduğu GitHub'ın altyapısına bağlıdır ve AB dışında (ör. ABD) olabilir.</li>
+</ul>
+<h3>Ne kadar süre</h3>
+<ul>
+  <li>Sipariş, okul, öğretmen ve kitap kayıtları, dükkanın sipariş işi için gerekli olduğu sürece saklanır. Uygulamada kayıtları belirli bir süre sonra otomatik olarak silen bir düzenek yoktur.</li>
+  <li>Silinen bir sipariş hemen yok olmaz. “Silindi” olarak işaretlenir ve gerekirse geri alınabilir.</li>
+  <li>İşten ayrılan çalışanın hesabı pasif yapılır. Pasif hesap giriş yapamaz ve verilere erişemez. Çalışanın adı, geçmiş siparişlerde “ekleyen” olarak görünmeye devam eder.</li>
+  <li>Yedeklerdeki kopyalar 90 gün sonra silinir. Bu yüzden canlı veritabanından silinen bir bilgi, en fazla 90 gün daha yedeklerde kalabilir.</li>
+</ul>
+
+<h2 id="paylasim">5. Paylaşım</h2>
+<ul>
+  <li>Veriler satılmaz, kiralanmaz. Reklam ya da pazarlama amacıyla kimseyle paylaşılmaz.</li>
+  <li>Uygulamada reklam, analitik ya da takip (tracking) aracı yoktur. Uygulama kullanıcıyı başka şirketlerin uygulama ve sitelerinde takip etmez.</li>
+  <li>Verileri yalnızca dükkan adına barındıran hizmet sağlayıcılar (veri işleyenler):
+    <ul>
+      <li><strong>Supabase:</strong> veritabanı, giriş hizmeti ve sunucu fonksiyonları (Frankfurt, AB).</li>
+      <li><strong>GitHub:</strong> gece yedeklerinin 90 gün saklanması (özel depo).</li>
+    </ul>
+  </li>
+  <li>Android'deki Google ML Kit kütüphanesinin gönderebileceği teknik ölçümler için bkz. <a href="#veriler">2.4</a>.</li>
+  <li>Yasal bir yükümlülük doğarsa veriler, yalnızca yetkili makamın hukuka uygun talebi ölçüsünde paylaşılabilir.</li>
+</ul>
+
+<h2 id="guvenlik">6. Güvenlik</h2>
+<ul>
+  <li>Uygulama ile sunucu arasındaki bağlantılar şifrelidir (HTTPS/TLS).</li>
+  <li>Verilere yalnızca giriş yapmış ve hesabı aktif olan çalışanlar erişebilir. Bu kural uygulamanın içinde değil, doğrudan veritabanında <strong>satır düzeyi erişim kurallarıyla</strong> (Row Level Security) her istekte denetlenir. Giriş yapmamış biri yalnızca uygulamanın güncel sürüm bilgisini görebilir.</li>
+  <li>Pasif yapılan bir hesap giriş yapamaz. Cihazda açık kalmış bir oturumu olsa bile verilere erişemez.</li>
+  <li>Şifreler sunucuda özetlenmiş (hash) olarak tutulur, düz metin olarak saklanmaz.</li>
+  <li>Hiçbir aktarım ya da saklama yöntemi kusursuz değildir. Bu önlemler riski azaltmak içindir.</li>
+</ul>
+
+<h2 id="haklar">7. Haklarınız ve iletişim</h2>
+<p>Kayıtlarda adı geçen çalışanlar ve öğretmenler, KVKK'nın 11. maddesi uyarınca veri sorumlusuna başvurarak şu haklarını kullanabilir:</p>
+<ol class="harfli">
+  <li><b>a)</b> Kişisel verilerinin işlenip işlenmediğini öğrenme,</li>
+  <li><b>b)</b> İşlenmişse buna ilişkin bilgi talep etme,</li>
+  <li><b>c)</b> İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme,</li>
+  <li><b>ç)</b> Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme,</li>
+  <li><b>d)</b> Eksik veya yanlış işlenmişse düzeltilmesini isteme,</li>
+  <li><b>e)</b> KVKK'nın 7. maddesindeki şartlar çerçevesinde silinmesini veya yok edilmesini isteme,</li>
+  <li><b>f)</b> (d) ve (e) bentlerine göre yapılan işlemlerin, verilerin aktarıldığı üçüncü kişilere bildirilmesini isteme,</li>
+  <li><b>g)</b> İşlenen verilerin yalnızca otomatik sistemlerle analiz edilmesi sonucunda aleyhine bir sonuç çıkmasına itiraz etme,</li>
+  <li><b>ğ)</b> Verilerin kanuna aykırı işlenmesi sebebiyle zarara uğraması hâlinde zararın giderilmesini talep etme.</li>
+</ol>
+<p>Uygulamadaki karşılıkları:</p>
+<ul>
+  <li>Yanlış ya da eksik bir bilgi (ör. öğretmenin telefon numarası) uygulamadan düzeltilebilir. Bunun için dükkana başvurmak yeterlidir.</li>
+  <li>Uygulamada okul ve öğretmen kayıtlarını silen bir düğme yoktur. Silme talepleri aşağıdaki adrese iletilir ve dükkan tarafından değerlendirilir.</li>
+  <li>Çalışan hesabının kapatılması istendiğinde hesap pasif yapılır.</li>
+</ul>
+<p><strong>İletişim:</strong> Üçyıldız Kitabevi, Isparta<br>
+E-posta: <a href="mailto:bilgi@ucyildizkitabevi.com">bilgi@ucyildizkitabevi.com</a></p>
+<p class="not">KVKK'nın 13. maddesi, başvuruların en geç otuz gün içinde sonuçlandırılmasını öngörür.</p>
+
+<h2 id="degisiklikler">8. Değişiklikler</h2>
+<p>Bu politika, uygulamanın işleyişi değiştiğinde güncellenir. Güncel metin her zaman bu adreste yayımlanır ve sayfanın başındaki yürürlük tarihi değiştirilir. Önceki sürümlere, bu sayfanın herkese açık kaynak deposundaki değişiklik geçmişinden ulaşılabilir.</p>
+
+<h2 id="cocuklar">9. Çocuklar</h2>
+<p>Uygulama çocuklara yönelik değildir. Yalnızca Üçyıldız Kitabevi çalışanlarınca kullanılır. Uygulamada öğrencilere ya da çocuklara ait bir alan yoktur ve bu kişilerden bilerek veri toplanmaz.</p>
+
+<section id="english" lang="en">
+<h2>Summary in English</h2>
+<p><strong>Üçyıldız Kitabevi Sipariş</strong> (<code>com.ucyildizkitabevi.siparis</code>) is an internal order-taking app used only by the staff of Üçyıldız Kitabevi, a bookstore in Isparta, Türkiye. It is distributed as an unlisted app. There is no public sign-up: accounts are created by the store.</p>
+<ul>
+  <li><strong>Data collected:</strong> staff name and password (no email address; login uses an internal, non-deliverable address derived from the name); teachers' names, optional phone numbers and their school (name, district, type), entered by staff when taking an order; order details (books, quantities, delivery method, status, optional note); book and price lists; which staff member created or changed each record.</li>
+  <li><strong>Purpose:</strong> app functionality only: recording, tracking and delivering book orders, and contacting teachers about their orders. No advertising, marketing or profiling.</li>
+  <li><strong>Storage:</strong> Supabase, Frankfurt region (Germany, EU). A full nightly backup is kept in a private GitHub repository and deleted automatically after 90 days.</li>
+  <li><strong>On the device:</strong> only the login session token, removed on sign-out. The camera is used only to scan book barcodes; images are processed on the device and are never stored or uploaded. On Android, barcode recognition uses Google ML Kit on the device, which according to Google may send technical usage metrics; ML Kit is not used on iOS.</li>
+  <li><strong>No</strong> ads, <strong>no</strong> analytics or tracking SDKs, <strong>no</strong> tracking as defined by Apple, <strong>no</strong> sale of data. No access to location, contacts, photos or microphone.</li>
+  <li><strong>Sharing:</strong> none, except infrastructure providers that host the data on the store's behalf (Supabase; GitHub for backups).</li>
+  <li><strong>Children:</strong> the app is not directed at children.</li>
+  <li><strong>Contact and data requests:</strong> <a href="mailto:bilgi@ucyildizkitabevi.com">bilgi@ucyildizkitabevi.com</a></li>
+</ul>
+</section>
+
+<footer>
+  Üçyıldız Kitabevi · Isparta · Yürürlük tarihi: 7 Ekim 2026
+</footer>
+
+</main>
+</body>
+</html>
