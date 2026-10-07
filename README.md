@@ -29,6 +29,12 @@ Adres değişirse üçünü birlikte değiştirin:
 grep -n "bilgi@ucyildizkitabevi.com" index.html
 ```
 
+## Sayfanın dayandığı yedek ayarları
+
+Sayfa, uygulama deposundaki `.github/workflows/gece_yedegi.yml` iş akışını anlatır: yedekler `age` ile şifrelenir,
+oturum/token tabloları yedeğe alınmaz ve yedekler **30 gün** saklanır (`retention-days: 30`). Bu iş akışı değişirse
+`index.html` içinde kısa özeti, 4. bölümü (Saklama), 5. bölümü (Paylaşım), 6. bölümü (Güvenlik) ve İngilizce özeti güncelleyin.
+
 ## App Privacy için özet
 
 App Store Connect → App Privacy formu için. Kaynak: uygulama kodu (`supabase/migrations/`, `lib/`, `ios/Runner/Info.plist`).

@@ -92,7 +92,7 @@
   <p>Bu uygulama yalnızca Üçyıldız Kitabevi çalışanlarının okullardan kitap siparişi kaydetmesi için yapılmıştır.</p>
   <ul>
     <li>Reklam, analitik ya da takip aracı yoktur. Veriler satılmaz.</li>
-    <li>Veriler Supabase altyapısında, Frankfurt (Almanya, AB) bölgesinde saklanır. Her gece alınan yedekler 90 gün tutulur.</li>
+    <li>Veriler Supabase altyapısında, Frankfurt (Almanya, AB) bölgesinde saklanır. Her gece alınan şifreli yedekler 30 gün tutulur.</li>
     <li>Kamera yalnızca kitap barkodu okumak için kullanılır. Görüntü kaydedilmez.</li>
     <li>Sorular ve talepler için: <a href="mailto:bilgi@ucyildizkitabevi.com">bilgi@ucyildizkitabevi.com</a></li>
   </ul>
@@ -183,14 +183,14 @@
 <h3>Nerede</h3>
 <ul>
   <li>Veritabanı, giriş hizmeti ve sunucu fonksiyonları Supabase altyapısında, <strong>Frankfurt (Almanya, Avrupa Birliği)</strong> bölgesinde çalışır. Yani veriler Türkiye dışında saklanır.</li>
-  <li>Her gece (Türkiye saatiyle yaklaşık 03:00) veritabanının tam yedeği otomatik olarak alınır. Yedekler özel (herkese kapalı) bir GitHub deposunda, GitHub Actions üzerinde saklanır. <strong>90 gün sonra otomatik olarak silinir.</strong> Yedeklerin hangi ülkedeki sunucularda tutulduğu GitHub'ın altyapısına bağlıdır ve AB dışında (ör. ABD) olabilir.</li>
+  <li>Her gece (Türkiye saatiyle yaklaşık 03:00) veritabanının yedeği otomatik olarak alınır. Oturum bilgileri (giriş anahtarları) yedeğe alınmaz. Yedek dosyası <code>age</code> aracıyla şifrelenir ve çözme anahtarı GitHub'da bulunmaz, yalnızca dükkanın elindedir. Yedekler özel (herkese kapalı) bir GitHub deposunda, GitHub Actions üzerinde saklanır. <strong>30 gün sonra otomatik olarak silinir.</strong> Yedeklerin hangi ülkedeki sunucularda tutulduğu GitHub'ın altyapısına bağlıdır ve AB dışında (ör. ABD) olabilir.</li>
 </ul>
 <h3>Ne kadar süre</h3>
 <ul>
   <li>Sipariş, okul, öğretmen ve kitap kayıtları, dükkanın sipariş işi için gerekli olduğu sürece saklanır. Uygulamada kayıtları belirli bir süre sonra otomatik olarak silen bir düzenek yoktur.</li>
   <li>Silinen bir sipariş hemen yok olmaz. “Silindi” olarak işaretlenir ve gerekirse geri alınabilir.</li>
   <li>İşten ayrılan çalışanın hesabı pasif yapılır. Pasif hesap giriş yapamaz ve verilere erişemez. Çalışanın adı, geçmiş siparişlerde “ekleyen” olarak görünmeye devam eder.</li>
-  <li>Yedeklerdeki kopyalar 90 gün sonra silinir. Bu yüzden canlı veritabanından silinen bir bilgi, en fazla 90 gün daha yedeklerde kalabilir.</li>
+  <li>Yedeklerdeki kopyalar 30 gün sonra silinir. Bu yüzden canlı veritabanından silinen bir bilgi, en fazla 30 gün daha yedeklerde kalabilir.</li>
 </ul>
 
 <h2 id="paylasim">5. Paylaşım</h2>
@@ -200,7 +200,7 @@
   <li>Verileri yalnızca dükkan adına barındıran hizmet sağlayıcılar (veri işleyenler):
     <ul>
       <li><strong>Supabase:</strong> veritabanı, giriş hizmeti ve sunucu fonksiyonları (Frankfurt, AB).</li>
-      <li><strong>GitHub:</strong> gece yedeklerinin 90 gün saklanması (özel depo).</li>
+      <li><strong>GitHub:</strong> şifreli gece yedeklerinin 30 gün saklanması (özel depo).</li>
     </ul>
   </li>
   <li>Android'deki Google ML Kit kütüphanesinin gönderebileceği teknik ölçümler için bkz. <a href="#veriler">2.4</a>.</li>
@@ -213,6 +213,7 @@
   <li>Verilere yalnızca giriş yapmış ve hesabı aktif olan çalışanlar erişebilir. Bu kural uygulamanın içinde değil, doğrudan veritabanında <strong>satır düzeyi erişim kurallarıyla</strong> (Row Level Security) her istekte denetlenir. Giriş yapmamış biri yalnızca uygulamanın güncel sürüm bilgisini görebilir.</li>
   <li>Pasif yapılan bir hesap giriş yapamaz. Cihazda açık kalmış bir oturumu olsa bile verilere erişemez.</li>
   <li>Şifreler sunucuda özetlenmiş (hash) olarak tutulur, düz metin olarak saklanmaz.</li>
+  <li>Gece yedekleri GitHub'a şifrelenmiş olarak (<code>age</code>) yüklenir. Çözme anahtarı yalnızca dükkanın elindedir.</li>
   <li>Hiçbir aktarım ya da saklama yöntemi kusursuz değildir. Bu önlemler riski azaltmak içindir.</li>
 </ul>
 
@@ -251,7 +252,7 @@ E-posta: <a href="mailto:bilgi@ucyildizkitabevi.com">bilgi@ucyildizkitabevi.com<
 <ul>
   <li><strong>Data collected:</strong> staff name and password (no email address; login uses an internal, non-deliverable address derived from the name); teachers' names, optional phone numbers and their school (name, district, type), entered by staff when taking an order; order details (books, quantities, delivery method, status, optional note); book and price lists; which staff member created or changed each record.</li>
   <li><strong>Purpose:</strong> app functionality only: recording, tracking and delivering book orders, and contacting teachers about their orders. No advertising, marketing or profiling.</li>
-  <li><strong>Storage:</strong> Supabase, Frankfurt region (Germany, EU). A full nightly backup is kept in a private GitHub repository and deleted automatically after 90 days.</li>
+  <li><strong>Storage:</strong> Supabase, Frankfurt region (Germany, EU). A nightly backup (login sessions excluded), encrypted with <code>age</code> and decryptable only with a key held by the store, is kept in a private GitHub repository and deleted automatically after 30 days.</li>
   <li><strong>On the device:</strong> only the login session token, removed on sign-out. The camera is used only to scan book barcodes; images are processed on the device and are never stored or uploaded. On Android, barcode recognition uses Google ML Kit on the device, which according to Google may send technical usage metrics; ML Kit is not used on iOS.</li>
   <li><strong>No</strong> ads, <strong>no</strong> analytics or tracking SDKs, <strong>no</strong> tracking as defined by Apple, <strong>no</strong> sale of data. No access to location, contacts, photos or microphone.</li>
   <li><strong>Sharing:</strong> none, except infrastructure providers that host the data on the store's behalf (Supabase; GitHub for backups).</li>
